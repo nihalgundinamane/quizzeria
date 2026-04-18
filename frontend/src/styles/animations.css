@@ -1,0 +1,203 @@
+/* ─── Page ─── */
+@keyframes fadeUp   { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeDown { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:translateY(0)} }
+@keyframes fadeIn   { from{opacity:0} to{opacity:1} }
+@keyframes scaleIn  { from{opacity:0;transform:scale(0.88)} to{opacity:1;transform:scale(1)} }
+
+/* ─── Stars ─── */
+@keyframes starPulse { from{opacity:0.08;transform:scale(1)} to{opacity:0.55;transform:scale(1.6)} }
+@keyframes starGlow  {
+  0%,100%{text-shadow:0 0 4px var(--glow,#FFD700),0 0 8px var(--glow,#FFA500);transform:scale(1) rotate(0deg)}
+  50%{text-shadow:0 0 16px var(--glow,#FFD700),0 0 32px var(--glow,#FFA500),0 0 56px var(--glow,#FFD700);transform:scale(1.35) rotate(18deg)}
+}
+
+/* ─── Rings ─── */
+@keyframes ringPop   { from{opacity:0;transform:scale(0.4)} to{opacity:0.45;transform:scale(1)} }
+@keyframes ringBreath{
+  0%,100%{transform:scale(1);opacity:0.28}
+  50%    {transform:scale(1.055);opacity:0.55}
+}
+
+/* ─── Logo letters ─── */
+@keyframes letterDrop {
+  from{opacity:0;transform:translateY(70px) rotate(14deg) scale(0.55)}
+  to  {opacity:1;transform:translateY(0) rotate(0deg) scale(1)}
+}
+@keyframes elegantDance {
+  0%  {transform:translateY(0) rotate(0) scale(1)}
+  20% {transform:translateY(-13px) rotate(-5deg) scale(1.06)}
+  40% {transform:translateY(8px) rotate(3deg) scale(0.97)}
+  60% {transform:translateY(-10px) rotate(-3deg) scale(1.04)}
+  80% {transform:translateY(5px) rotate(2deg) scale(0.99)}
+  100%{transform:translateY(0) rotate(0) scale(1)}
+}
+@keyframes taglineReveal { from{opacity:0;transform:translateY(10px)} to{opacity:0.8;transform:translateY(0)} }
+@keyframes lineExpand    { from{width:0} to{width:140px} }
+
+/* ─── 8 unique round name animations ─── */
+/* R1: Bounce up from below, elastic */
+@keyframes r1BounceUp {
+  0%  {opacity:0;transform:translateY(80px) scale(0.5)}
+  60% {opacity:1;transform:translateY(-16px) scale(1.08)}
+  80% {opacity:1;transform:translateY(8px) scale(0.97)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+/* R2: Zoom in from tiny + blur */
+@keyframes r2ZoomBlur {
+  0%  {opacity:0;transform:scale(0.1);filter:blur(20px)}
+  70% {opacity:1;transform:scale(1.06);filter:blur(0)}
+  100%{transform:scale(1);filter:blur(0)}
+}
+/* R3: Slide in from left, overshoot */
+@keyframes r3SlideLeft {
+  0%  {opacity:0;transform:translateX(-120px) rotate(-6deg)}
+  65% {opacity:1;transform:translateX(14px) rotate(1deg)}
+  100%{transform:translateX(0) rotate(0)}
+}
+/* R4: Slam down from top, shake */
+@keyframes r4Slam {
+  0%  {opacity:0;transform:translateY(-100px) scale(1.4)}
+  55% {opacity:1;transform:translateY(10px) scale(0.97)}
+  70% {transform:translateY(-5px) scale(1.02)}
+  100%{transform:translateY(0) scale(1)}
+}
+/* R5: Stretch wide then snap */
+@keyframes r5Stretch {
+  0%  {opacity:0;transform:scaleX(0.1) scaleY(2)}
+  50% {opacity:1;transform:scaleX(1.1) scaleY(0.95)}
+  75% {transform:scaleX(0.97) scaleY(1.02)}
+  100%{transform:scaleX(1) scaleY(1)}
+}
+/* R6: Fade up with letter spacing expand */
+@keyframes r6Elegant {
+  0%  {opacity:0;letter-spacing:-8px;transform:translateY(20px)}
+  100%{opacity:1;letter-spacing:2px;transform:translateY(0)}
+}
+/* R7: Spin in */
+@keyframes r7Spin {
+  0%  {opacity:0;transform:rotate(-180deg) scale(0.3)}
+  70% {opacity:1;transform:rotate(8deg) scale(1.04)}
+  100%{transform:rotate(0) scale(1)}
+}
+/* R8: Glitch / split reveal */
+@keyframes r8Left  {from{opacity:0;transform:translateX(-60px)} to{opacity:1;transform:translateX(0)}}
+@keyframes r8Right {from{opacity:0;transform:translateX(60px)}  to{opacity:1;transform:translateX(0)}}
+
+/* ─── Timer ─── */
+@keyframes timerPulse  {
+  0%,100%{box-shadow:0 0 0 0 rgba(255,215,0,0.35)}
+  50%    {box-shadow:0 0 0 10px rgba(255,215,0,0)}
+}
+@keyframes timerDanger {
+  0%,100%{box-shadow:0 0 0 0 rgba(239,68,68,0.5)}
+  50%    {box-shadow:0 0 0 12px rgba(239,68,68,0)}
+}
+
+/* ─── Options ─── */
+@keyframes optionSlideIn { from{opacity:0;transform:translateX(-18px)} to{opacity:1;transform:translateX(0)} }
+@keyframes correctPulse  { 0%{box-shadow:0 0 0 0 rgba(34,197,94,0.6)} 50%{box-shadow:0 0 24px 6px rgba(34,197,94,0.35)} 100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+@keyframes wrongShake    { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 40%{transform:translateX(8px)} 60%{transform:translateX(-5px)} 80%{transform:translateX(5px)}}
+
+/* ─── Score ─── */
+@keyframes scorePop  { 0%{opacity:0;transform:scale(0.3) translateY(12px)} 55%{opacity:1;transform:scale(1.2) translateY(-6px)} 100%{opacity:1;transform:scale(1) translateY(0)} }
+@keyframes scoreBump { 0%{transform:scale(1)} 30%{transform:scale(1.22)} 60%{transform:scale(0.95)} 100%{transform:scale(1)} }
+@keyframes floatUp   { 0%{opacity:1;transform:translateY(0) scale(1)} 100%{opacity:0;transform:translateY(-60px) scale(0.4)} }
+
+/* ─── Slide in ─── */
+@keyframes slideInRight { from{opacity:0;transform:translateX(40px)} to{opacity:1;transform:translateX(0)} }
+@keyframes slideInLeft  { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
+
+/* ─── Glow pulse ─── */
+@keyframes glowPulse { 0%,100%{opacity:0.4} 50%{opacity:0.9} }
+
+/* ─── Category completion ─── */
+@keyframes checkPop { 0%{opacity:0;transform:scale(0)} 60%{transform:scale(1.3)} 100%{opacity:1;transform:scale(1)} }
+
+/* ─── Question dot complete ─── */
+@keyframes dotGreen { from{background:rgba(255,255,255,0.1)} to{background:rgba(34,197,94,0.7)} }
+
+/* ─── Coin Toss Animations ─── */
+@keyframes coinSpin {
+  0%   { transform: perspective(400px) rotateY(0deg) }
+  100% { transform: perspective(400px) rotateY(1800deg) }
+}
+@keyframes coinSpinFast {
+  0%   { transform: perspective(400px) rotateY(0deg) }
+  100% { transform: perspective(400px) rotateY(3600deg) }
+}
+@keyframes coinLand {
+  0%   { transform: perspective(400px) rotateY(1800deg) translateY(0) }
+  40%  { transform: perspective(400px) rotateY(1800deg) translateY(-18px) }
+  70%  { transform: perspective(400px) rotateY(1800deg) translateY(6px) }
+  85%  { transform: perspective(400px) rotateY(1800deg) translateY(-6px) }
+  100% { transform: perspective(400px) rotateY(1800deg) translateY(0) }
+}
+@keyframes winnerSlam {
+  0%   { opacity:0; transform: scale(0.3) translateY(40px) rotate(-8deg) }
+  55%  { opacity:1; transform: scale(1.12) translateY(-10px) rotate(2deg) }
+  75%  { transform: scale(0.96) translateY(4px) rotate(-1deg) }
+  100% { transform: scale(1) translateY(0) rotate(0deg) }
+}
+@keyframes confettiFall {
+  0%   { transform: translateY(-20px) rotate(0deg); opacity:1 }
+  100% { transform: translateY(100vh) rotate(720deg); opacity:0 }
+}
+@keyframes drumRollPulse {
+  0%,100% { opacity:0.4; transform:scale(1) }
+  50%     { opacity:1;   transform:scale(1.05) }
+}
+@keyframes callChip {
+  0%   { opacity:0; transform:translateY(12px) scale(0.9) }
+  100% { opacity:1; transform:translateY(0) scale(1) }
+}
+
+/* ── GROUP A: Countdown Heartbeat ─── */
+@keyframes timerHeartbeat {
+  0%   { transform: scale(1);    box-shadow: 0 0 0 0 rgba(239,68,68,0.5) }
+  14%  { transform: scale(1.12); box-shadow: 0 0 0 6px rgba(239,68,68,0.25) }
+  28%  { transform: scale(1);    box-shadow: 0 0 0 0 rgba(239,68,68,0) }
+  42%  { transform: scale(1.07); box-shadow: 0 0 0 4px rgba(239,68,68,0.15) }
+  70%  { transform: scale(1);    box-shadow: 0 0 0 0 rgba(239,68,68,0) }
+  100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(239,68,68,0) }
+}
+
+/* ── GROUP A: Question Reveal ─── */
+@keyframes questionReveal {
+  0%   { opacity: 0; transform: translateY(32px) scale(0.97); filter: blur(4px) }
+  60%  { opacity: 1; transform: translateY(-4px) scale(1.005); filter: blur(0) }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0) }
+}
+@keyframes questionTextSlide {
+  0%   { opacity: 0; transform: translateX(-18px) }
+  100% { opacity: 1; transform: translateX(0) }
+}
+
+/* ── GROUP B: Fire Banner & Milestone ─── */
+@keyframes fireBanner {
+  0%   { opacity: 0; transform: translateY(-8px) scale(0.85) }
+  60%  { opacity: 1; transform: translateY(2px) scale(1.05) }
+  100% { opacity: 1; transform: translateY(0) scale(1) }
+}
+@keyframes milestoneTag {
+  0%   { opacity: 0; transform: translateX(-50%) scale(0.7) translateY(-6px) }
+  15%  { opacity: 1; transform: translateX(-50%) scale(1.1) translateY(0) }
+  75%  { opacity: 1; transform: translateX(-50%) scale(1) translateY(0) }
+  100% { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(-4px) }
+}
+
+/* ── GROUP B: Category Reveal Drama ─── */
+@keyframes cardFlipOut {
+  0%   { transform: scale(1) rotateY(0deg);   opacity: 1; filter: blur(0) }
+  40%  { transform: scale(0.92) rotateY(45deg); opacity: 0.7; filter: blur(1px) }
+  100% { transform: scale(0.85) rotateY(90deg); opacity: 0;   filter: blur(3px) }
+}
+
+/* ── GROUP D: Idle Screensaver ─── */
+@keyframes idleFadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+@keyframes idleBreathe {
+  0%,100% { opacity: 0.35; transform: scale(1)    translateY(0) }
+  50%     { opacity: 1;    transform: scale(1.06) translateY(-4px) }
+}
